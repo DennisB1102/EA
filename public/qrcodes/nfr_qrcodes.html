@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>NFR QR-Codes – Außenprüfung</title>
+  <style>
+    @page { margin: 10mm; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 10mm;
+      background: white;
+    }
+    h1 {
+      text-align: center;
+      font-size: 16pt;
+      margin-bottom: 3mm;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 9pt;
+      color: #666;
+      margin-bottom: 8mm;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6mm;
+    }
+    .card {
+      border: 1.5px solid #333;
+      border-radius: 6px;
+      padding: 4mm;
+      text-align: center;
+      page-break-inside: avoid;
+      background: white;
+    }
+    .card img {
+      width: 100%;
+      max-width: 50mm;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    .label {
+      margin-top: 2mm;
+      font-size: 14pt;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    @media print {
+      body { padding: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>NFR – Außenprüfung QR-Codes</h1>
+  <div class="subtitle">Passwort erforderlich · Kein vollständiger Systemzugang</div>
+  <div class="grid">
+
+    <div class="card">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZoAAAGaAQAAAAAefbjOAAADH0lEQVR4nO2cXYrcOhBGT0WGflTDLCBLkXeQNWVn9lKygID1GJD58iDJ9gwX7g2Ta890lx6EmdahS7Son6/kMfHHY/7y5ww45JBDDjnkkEOPCVkbQ3sa84CN2QzyAOS+YLzEPIfOh5IkaQFpCWK+AxBkI6sBQZKk19B55jl0PpSbA7ARkFTQFH+Zpr7QzIbrzHPoMkgTq5ndAfJNzF/L//RNDn0OyEb6sRgByDe1p7/8TQ59TKhHgiggg8hA+jEgKJDU/nZUsj74nhz6C9BsVmOFjTWfDOoFx4CNrLXUuMo8h872EUcHEAsir8Z8D81lVA9yhXkOnQ6hfUyEOpEW6E9BtSJNS1CtUqcPvieH3gNx1BlioZebQaRagkoQy2Gxn4iHhrqP6F6gHQFAUyw01UqlTu4jHh/aVKfVIP4y0rIOIr8USz9uMmIZakI5j0F2tnkOnQ61qLGlC9ICJBVarIiq8YNUP3Af8eDQIY/QFHVoX+wB49XZ8BPxHFBaYO9zkiSZfS1UKbu6h2XtbY7PsSeH3pdHhGLEBSOWQbOFotrX+FaAfEfzfZGl6VzzHDod2qJG0CFM1ODQa409j/Dq81mg1vGsYWJA3++r1VhRb0rkm2oecY15Dp2vRzR/0FVJLUfNEgjtMHhm+fBQPxGvRcoWIfopaWJmkEeN54Figdl6XQFBzDZgYyw0RxELNl5knkOnQbXWMCJA/GkQF4DVRFyw2ULRbKFAHorONs+h06GuWar3MPYGKISaYBxLD48ajw4dVGyIW1IZS532Jb3d5SfiOaBWZFovQetojmJ/VcPGa8xz6Ow8QttkEGTEIKtdUIA0gZFfXI94Gmh/p0tTNtOUzarfaM5j+AfoPPMcuiKz3K7NbCrE1v5u0+J6xDNAW2YJx9+8lxl7egmuUD0nNN9XI6lgY76ptjm03Zi53DyHzofqJYmBqmOmBczuQbC/5/Xp9uTQfx9v3+mC+HMwwEjTOmgeQ7EqV+bQA8gH35ND74HaiZjrndoATYVYByDIklYT+QXmEXMV+/Eh07+veTv8P5M55JBDDjnkkEMAvwECnlKLc/oqnAAAAABJRU5ErkJggg==" alt="QR NFR01">
+      <div class="label">NFR01</div>
+    </div>
+
+    <div class="card">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZoAAAGaAQAAAAAefbjOAAAC20lEQVR4nO2cW2rjQBBFT00L8ilDFpClSFueHUgLGlB/BiTufPRDcggMITOSp136MH70QWV8qapbUtvEl4/5x9cZcMghhxxyyCGH2oQsH11+NsYOG6MZxA6IZcF4SXgOnQ8NkqQFpCWI+QZAkI1sBgRJku6h88Jz6Hwo5gRgIyBpRVP/bprKQjPrrgvPocsgTWxmdgMb44vM3tZ/dCaH/g/Ixvp0vm2mKb7o8N5fPJNDjwmVStALiCAQRjQYft5gECh/cEF4Dl0FzWa1VnQwLEGkzjJ22MiWrMZV4Tl0do64G2VvpvltJT0QIWeQK8Jz6HQI7cdEUHKfQ3KaQQxLfa98oOnBv5ND34E4zhn6FU2E9FJTL2nqJejXw2JXRNNQyRElCyRF1HzAsJTxhLTiOaJ9qCoCGLSSJbAAEI7pIUnFFdE6lKtGbRfyy5IeoJd2qbgi2odKH5F6hrUaz5woUq1IiaKX54gngEqz2Kt0Dwtkr9GvFOuxpprinWX7UM0RORVoKoYjFZEslWw9PEe0Dx28hia4sxQpR3DXcroiWoc+ziNKPljLJXHgMJxyRTQPVa/B3Q+/VLtZrnCk1V41mofuFKFqKZY6l1ryUCL3Fq6I1qGD1yh2s4wwgew6hn2JK6J16DCP2E1mrhU1M+wProjmoVI1lH1FGlMBeQCRpla79XBFtA4dpthpcLk7DHppX5LbCldE61B1n7VxWCBrY9m9BqWcuCJahw73UAnA8lYNMAjkGcUERnz1/RpPA+17usoUAoDN8l6e2H0CnReeQ+dDdS5lY/9e9vYVR7rfJHFVeA5dN7PMN0kspPbyYD1w9/mc0HzLGz1tJAhiV65+LY8QnkNXQuXCl9ktCNh8b/gTQB/3dEH/qzPAGKat0zyG1YjdKmIoBeTBv5ND34GyIua0XStAnkxsHRBkgzYT8RXmEdPZ4Tl0OmT685qPh/8zmUMOOeSQQw45BPAb79KoWSpRpLEAAAAASUVORK5CYII=" alt="QR NFR02">
+      <div class="label">NFR02</div>
+    </div>
+
+    <div class="card">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZoAAAGaAQAAAAAefbjOAAADCUlEQVR4nO2cTY6jMBBGX40tZUmkOUAfBW7WV4Oj9AFGMsuWjL5Z2AYys2q1BjKkvIgS4IlClOrnsx0TXx7Tj68z4JBDDjnkkEMOXROyOmL9NswRG2YzmCMwtwuGU8xz6HiolyQlkFIQ0x2AIBtYDAiSJD1Cx5nn0PHQXAOADYCkjMbu0zS2C80snmeeQ6dBGlnM7A4w38T0lv/RnRz6PyAb+MstbPgXd3LoOaGWCToBMwhyhDki5p/QC1RPnGCeQ2dBk1kJCjbMN9l7CiUy1K6DpbQaZ5nn0NEx4g8pW9PbpzG95RIeagQ5wzyHDofQNkaCSvfZKwME0af1WDkhaXzyZ3LoOxB7naHLaCRoO6Gxk6DL7I89+TM59H2oRoGP2/r2g0pZ8f5hVqUrZWw4xTyHzoAWg+7T7D0tJqXF6D8iTG+5ilOT3VyzfAGoZo21XGh1xJorOtWyok/gdcT1oV0dobHTbvpiyxUPvuEecXGoFYtACxSwxYhd69Ere2X5AtAaI4JKFFgbjpJExk6iTzWCeIy4PtT0iBRKoChporz4EiNgqyM8Rlwf2mcNuvbiizMos6WTuoTCPeLq0M4jtjajFJVj0yyhqVaeNa4PPVSWWluK1JbNKIWH2sI94lWgTmKyWAsHCOWnDSWTVLew4STzHDoMKnOfRgfQ/YrWjwAsJrqETRayJgsZ5ph1tHkOHQ41zVK1rygyVSkhWsOxbz08a1wdamuo5p8yOkGflihYTNP9VwRiXT3Rp+V48xw6HHpQqKBOX+zkyrS1Gdl7jZeBal8hPW7VgKpRSIL51nSL/+KZHPoOtO3pqitm5ghlad0d6sau88xz6Hho1aXsXZ9WZ74/bnXia11DdZZ5Dh3fayTa3OcqYY5dLh9tuEL1ktB0X4xekg3zreSPOvuVnsE8h46HymbwyDbxZXYPAhbfG/4C0J97uopwCRj9uERNQ8hW5Mo5tATy5M/k0Heg6hFT2a4VoCoTSwSCrNdiZb/fNGCuYl8fai/5K8P/mcwhhxxyyCGHHAL4DcF6an8qZU7tAAAAAElFTkSuQmCC" alt="QR NFR03">
+      <div class="label">NFR03</div>
+    </div>
+
+    <div class="card">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZoAAAGaAQAAAAAefbjOAAAC8UlEQVR4nO2cTY6cMBCFXwVLvTTSHGCOYm4W5Ui5gX2gkfAyktHLwmW3O5nNaCbQgfKihcGfKESp/ly0EB8e6dvHGcAggwwyyCCDDDonJDqcHi3ZQZYsAmQHILcFyyHiGbQ/FEiSK0CuE5FmAMBEWbAJgIkkyUdoP/EM2h/KagBkAUCygNH/Esa2UETcceIZdBjEiE1EZkCWfKPIa/lHdzLo/4Bk6Ydp3oQx3zic+8I7GfScUPMEngAywPRKCLIA8G8OgQCRgbGS9eTPZNBnIIwRIyYirO/9tAWBJOOTP5NBn4GqjRgMQJohzSiUah7UghwhnkGHQkncmH2mllww1vKEgywHimfQLtCD1/AFjF6nelR/yrDYvMapIX3JbDEDYwsmSBYgrK08UaemEZeBNgH8L5Hv6yZ1muRGpNeixakkN6tZXgCqoYKEn1MB8gsBEAJfnIR1rgVsCXHr033FM2h3qMURnmT0BTXdrBdWdRgaR3jSvMb5oVEj2GsPgRpP6rkaQhSLLC8Atciyv/PoCxgxVQWpCUdYW+phNuL0kNqIwVfcU4pqIwC1Eatln5eDPClLduCPeZPqP2qnRL61ysSR4hm0B9RtBDSovPfO9MoEALUg5jXODzWNGHxFCxxqXWqdNMaMrZHKNOLUUAsNfO+q6yVMAJp1hPsS04izQ0P2WQ0FelGiph7QyrbZiItAg9donbf9ktdkdEw9TCPODj1kn14rE5pzDhlpv2AacXao74bfAwfdEv87orC9zytA3QDoaA0RHLc5QjMjZiPOD+nep86mwrS4ghABAXQ3HMgvDz36T/5MBn0B1OtSsvgCILv6BY823fryHrSfeAYdV7O8JxyMgOYaOsxrXBIaP/mcWK1F7687XjyDjoS86oHIPBHAZt+GXwD685suwL85ASAIcXNMy1QE2RUiT82BPPkzGfQZSDUi1WxjArQysTnUFktuQuQXIC0Q7i2eQbtD7SV/ZNg/kxlkkEEGGWSQQQDwG42ek+Nhm6egAAAAAElFTkSuQmCC" alt="QR NFR04">
+      <div class="label">NFR04</div>
+    </div>
+
+    <div class="card">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZoAAAGaAQAAAAAefbjOAAAC8klEQVR4nO2cQYrkOBBFX4wMtVRCHaCOYt9gjjTMkeYG9lHqAA32skHmz0KSraxpaJqi7Ro7vDBOrEeGIfJH6FtKE798TH/8OgMOOeSQQw455NA1IStHV66GpcOGxQyWDljqgOGU8Bw6HuolSTNIcxDTA4AgG1gNCJIkPUPHhefQ8dBSBMAGQFJCY/xuGutAM+vOC8+h0yCNrGb2AFhexPSWftM3OfT/gGzgP2lhw+/4Joe+JlQrQRSwgKa31MHSoenPGXqBWKB1sr74Mzn0GYi2YySIfv7RqQ7oJWn84s/k0GegrBGNAEyPgFhWg5iyPBQFOSM8hw6HskbkYyRImoM0As1H7WrhGnF16KlqxITGWD6WG1GCmJrBnhE3gIoKvL+0HcX0WI3+3axYV0rYcEp4Dp1QNWagV6qnuWbJLg8jXjXuAOXO0vp/QoLlVbC8yoipM+L3bGBbP66d9fPDDg/PocOhpo/QGNW8vthrRRGKKNeIG0A8pUDY6kfpJ0uDUcuJd5bXh7Y+ojQJZcKxz0OjskNVrjwjrg4VjejnsM05U7Ums0bw1G16RlwdajWCRg9SfSUONOaUZ8TlofqzZzMltrUz4/aaA4qCeNW4PlQzIu61ogqFlBpTovQWnhG3gYKYzKy+5wxisg4bYipVg+ie5R2g4lARAeK3zogzwGrqBTZZSJosJFi6pKPDc+hwqM41lNhX3uYWgvihnLgfcQfoafaZPcs9N9oh5YZnxNWhzbPcZxOJRg80tzd8rnF9qF0xk3MjqlGL3Yqgn32ucR9o39OlMW/i6jB7BOnvt0TZ2HVeeA4dD22+lP21O9bv22Q0ph9Bx4Xn0AmdJdS6ULzr3EyMTTJ41bglND3IkmHD8qK8c0NVN84Pz6HjodpH5FrRz+SOAlh9b/gNoI97uopxCUY/rp2mISTLduUSagH54s/k0GegkhFTXkIZoDgTa0deYqnVxPIK04C5i319yPTzMR8P/2cyhxxyyCGHHHII4F+Npabz67L3UAAAAABJRU5ErkJggg==" alt="QR NFR05">
+      <div class="label">NFR05</div>
+    </div>
+
+    <div class="card">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZoAAAGaAQAAAAAefbjOAAADBUlEQVR4nO2cS4rjMBCGvxobspQhB8hR7JvN1eyj9AEC1jJg889CkuP0DAxNuuPEKS2MH/qQRIp6qRQTX27Dr68z4JBDDjnkkEMO7ROy3Op818Ua66IZxBqIpUO3yfQcejzUSpJGkMZKDA0AlaxjNqCSJOkWetz0HHo8FLMCsA6QNKE+XEx96Whm9XbTc2gzSD2zmTVgXTzI7DT90EgOvQZk1pTboZlNfTzIup8YyaHnhIolCAIiaOiqyWCuIZxrWoGIsM5kPfmaHLoHYu0xUol2/NeldGglqX/yNTl0D5R0xFoBhItpOE0IpqQesgbZYnoOPRxKOiK1nkrqg5RCUIKSjkiPSVu4jtg7dGM1wsQ13CzvJAjTqrNLxBtAWQt8HFQec1KC9sPs+mjdJtNzaAtoNggXs99jeTNYDcNpysmpwQ6es3wDKFuNxV3ImkETOcII0urR/YjdQ8U1WNyFdqz+Mh3Jj0iy4RLxPpCU/IjZaKWSwI6HnI9ox7lsc7zOmhz6eiuh54T6sFwoRqRPISjkO9cRe4du/QiKC5EsycT63ejR5ztAn/MRRR9MZUscWCWnXCJ2DxUdcVUUS+1Mv2xzQPY23Wq8DxRrIFyMocllM7RaKmZS7Uwl9yz3DxXXgKpU1WnZ1wCy8igBqluN/UPFj7gmojQtjkOJOq4Xl4jdQ7lipu3nWsQGERuA2RiaMxDORivSnR49PYceDq2iTwjrzEQyGEuX9MF1xLtAqRw/LicyqFS8Tel6VCN/fY01OXSH1dByscHyFw2ni9H2QNuDEY++9/kGUJKIIgXVpKEDa0cwOIihGYF4vKnRf/I1OXQPtHiWAPGIEUayCIRx2RK/PbTx5Gty6Dug4kJIH5Y0hvpYp0MbDGZWTv5tMz2HtoOWH946AGJd6uvGbx7JoZeDysaXWVOlwgnrfmYkh54H+nymC8K5NsBS1iod8Yr1JGJVvIknX5ND90BZInLMWUHe55xroJK1mk3EIwwdnrN8A8j0/z6fm/8zmUMOOeSQQw45BPAHjN9C7QUulewAAAAASUVORK5CYII=" alt="QR NFR06">
+      <div class="label">NFR06</div>
+    </div>
+
+    <div class="card">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZoAAAGaAQAAAAAefbjOAAADAUlEQVR4nO2cTY6jMBBGXw1IvTRSDpCjwM1GczM4Sg7QEixbMvpmYZvATG96Mk1+KC8QCTzFVipV9VXhmPjyGH58nQGHHHLIIYcccug1IcujzmfdVGPdZAZTDUzlhu4u03Nof6iVJI0gjZUYGgAqWcdsQCVJ0hbab3oO7Q9N2QFYB0iKqA8fpr7caGb1/abn0N0g9cxm1gBMb2I4x2/6JIeeAzJr/jIL677jkxx6bChI6oFrmFAfIrSK6T1J8U9ov+k5tBvEOmOkEu342aHc0EpS/+BrcugWKGWL61J2iGg4f1g6YwII21r3g6/JoVug5CPS6KmkPmQdCkHJRyRFmryF+4hXhzZRI8RVHpFjRZAgxNXNbhEHgLIXuLzpahb6dY7QXsxy6UoR6+4yPYfuEDVGkq5I4iJXL2HlHno8ahwBylFjSRdWtpGMIUjZVNIFt4gXh0pqAKSixJJWXGPFxjbcIo4DSZfc56SVZHaOpFJ2cg/jXNocz7Mmh74+Sh6RhWfJLKv1e+0I+cx9xKtD2zyCJb2U1IecY17zCFefrw/lmuXQYBBiDVODhua9VjvOMHQA00m2Klw++JocugUqP/tQQsciRrPcHCsBVbYGjxovDy1ao1Lucy6Jg1JlotrkFm4RR4IGq0vtmkoMVmNdiGRHEbxmeQSo9DWW9kWrq49QChi5BeY+4hBQ0Rqr2nVpdqanaMJWerhFvDq0Up+lZhkp3/6m45nSCreIg0Dpcfxp2ZEBWDe9JSu5btXIV59jTQ7dUo9YDjYYkOXmh9H2QNuDMZ18v8YBoGQRll9VUUMHBnU0wiiGZgSm0+YZ/Qdfk0P/AWpLXcp+ljPayyJGQ/wM2m96Dt0hs4Tc3FCpRvWL1sjD1echoaEhtbasS5uA66w6ro/oP92aHLoJKnaQC1YjmDWVgNn3hh8AKrt7gyDvzXivDTDafq41dFU0pjqKqSoB5MHX5NAtULaIojkhC8+5BipZq9nEdIKhw7T39BzaHTL/ZzKHHHLIIYcccugfod/cl3vQckirNgAAAABJRU5ErkJggg==" alt="QR NFR07">
+      <div class="label">NFR07</div>
+    </div>
+
+    <div class="card">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZoAAAGaAQAAAAAefbjOAAADB0lEQVR4nO2cTY7bMAyFHysDWdpAD5CjyDfokYo5Um9gH8U3kJcDWHhdiJSd5TSpnbHpRRBM9CEUIvDnkRohvvyMP77OAA455JBDDjnk0Dkh0afRd/3cQPpZBJgbALMt6A8xz6H9oUiSTACZAjF2AIBA6ZEFQCBJ8hHazzyH9odmdQDSAyC5gEP7KRxsoYg0x5nn0GEQB2QR6QBgvhHjfYH0/+ObHPoekEgHcAAgJWDMN66O4pXf5NB7QhYJWgKYAY6/EgQtQICQyCyIf4CtkvXme3LoBdAoUmKF/J4aIE4NpC9lxo0Acik1jjLPob19xMYBjPcFQPspQLuAmLPw0UO8/Z4cehU0SgNyqiXFXJ3CrC5D+gPNc2gXCFudoV3AAYFAS2KjQrTLZjGHN9+TQ89A+iMzBSKmQJILELkAMQHllJD6UpQsPxGXgLIA7WdJL/nRQTOKODUqTo1yc83yApBGjZhMwI6pRo0SKwIRbYn7iPNDj3mExQ/9YAGZHj7wE3EVqHS6SpmRBZGkStkI6h6AbG2O77Enh57KLGvuWAsOMgVyaKmRJLqPuARkeQSp7Yu4lhStRY1aenj1eX6o5hHBHEUC9DBwgZ6S6h78RJwe2mSW5iNsdmbANlasi/1EnBqyHxmA1Zy1GC0uQzNLDvATcSkokJxEtNxEIEZpUBLNj041CumPMs+hvSCLGlWSijRdqjY3irw9WJvDfcSpoVprWFJZDwiHdoGKU2vp4SfiKtB8o8idJVZoWlEmZqwHrjLVMeY5tBu0qT7tL8FcxppyAg9CxZvvyaHnIdMsrcMxdoE6MdPSqs91Bvdb7MmhZ6D1TpeKlCmLyJ0sY5clfhxnnkNHdboSINJl4WAphN7ushmqo8xzaP9aIwE2Q2V1xQDTMfXx6vOS0NhlQZxulN40irUperx5Du0PPeYMcWos0UT2u+EXgLbdcB2IMFcQWUezoZMSHjXOD6lDGMvNjACoMpEbAIESmYWYfwJxErvI8+Z7cugZSPw/kznkkEMOOeSQQ/8I/QV8z20a7P4gHwAAAABJRU5ErkJggg==" alt="QR NFR08">
+      <div class="label">NFR08</div>
+    </div>
+
+    <div class="card">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZoAAAGaAQAAAAAefbjOAAADAElEQVR4nO2cTY6bQBCF3wstsWxLOcAcBW6QI+VqcBQOEIleWgK9LLoa8CRSNPIEPFAsLIP7E4Vcrp/X3abw4aP/9nEGcMghhxxyyCGHzgnRjmDv2hTANpFACgBSGdAeYp5D+0ONJGkEpLES+hsAoBJbzARQSZL0CO1nnkP7Q8kCAFsAkiaoi3eqKwNJhuPMc+gwSB1mkjcASLXQv01g+z/u5NBrQuHdOf84rQWkT7iTQ18LipI6AOqiBGAmECdIuud0Imk6zjyH9oZ6MucK/hwC0Ay1SsNRZwchST5C+5nn0N5ZYyNl9293CrjnGAFgph4G7GqeQ4dCPQOkoRZbVAJSgPUaOVoEsD3QPId2gbDVGeJkegRyMbGoEHHaDFb34s/k0PNQ9oNmqIX+NhPATDTjTPI206QrLX3ol3gmh56EZgLxTrZxwqpLoRmCiVM9a9csLwBZ1mjGShYo1pfcblZCk4fA1G7PGmeGHusI843ywQRptA/Mc9wjLgLlGDGwlBCSTMpGZeEBiWWa42s8k0NPxAiLB5qQG44OlkSyhLnNJB4jTg5t64gOpXrIX3wsWSNfG737vAK01BHmDLnTzM6g0nWs4cE94vRQ+dkDSzwoa2dyyCjOsB384s/k0DPQkjWWaBHX0yJhNiNgTuMecXZokzU233kuKrFGkKXGdI84O1RiRH6ZchX5sFKi2tSdHiPODy1rqOYgpFue9ibimK+q/zFCwAQg/qL2Ns+hw6BUi3yT0JcFtuvqfLYATKY6yDyHdoO23ed6NItq1W2uTT6vcRmoaJbFN/J+jRRgrYckINVyFfsq0Lqny0SJgWQbpbzsMvvGceY5dMBMV9Gl8hKZDsiL7CxaxOlv0H7mOXSIQmUToKuE+VhHwLvPa0I9ucyGVyqbNmxS9HjzHDoIWgqHZghAf6ts00b76Xdy6MWgjWZZFkSUUGDqZVU07uhzn1eALBb0ebtWBZgyMQcAldhoppC+A81AuGZ5foj695j3h/8zmUMOOeSQQw45BAC/AVWDZwF6n8myAAAAAElFTkSuQmCC" alt="QR NFR09">
+      <div class="label">NFR09</div>
+    </div>
+
+    <div class="card">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZoAAAGaAQAAAAAefbjOAAAC/UlEQVR4nO2cW46bQBBFTwUkf2JpFjBLgR1kSVF2BkthAZHg01Kjm49+gCeRopEnxjbFh+XBfeQuUarH7fKY+PQ1fPs8Aw455JBDDjnk0GtClq46vevmGutmM5hrYM4Lul2259D9oVaSNIE0VWI4A1DJOhYDKkmSrqH7bc+h+0NzCgDWAZIC6puLqc8Lzazeb3sO7QapZzGzM8B8ktl7wLr/8U0OPQdkdq5icrCYMOaT1kDxld/k0GNDjeKDz7liMfWNJOkS04mksN/2HLobxLZipBLt9LeXvKCVpP7BbXLoFihWixspe3gPCC4muBiwmK4W3HV7Du0KDVYjjTXWAdatJUSUJ9IHT2WTQ5++tlmjCainEjSKCSN92oTNYs8aB4CiLtWOJ9FOi9GOZtBczOy8WJKuVPrQp7DJoRuhpbgA6Od7IAqX7VgncWqwk2uWB4BS1minEiiUEkZesN7De40DQLmOaHK5EJ2hCUnK1gRRrSj+4h5xBCjGiLEGWIx2qpSkbFY9YsnHHM9hk0M3xAjpqq9QT5Xu9bnrSC8eI14dKnVElbSHViGXC03OGvHe5N3nEaD8kOMERHKB5AwKJC+J4SG4RxwAKh5BfvpldqZnmyu2ix/cJodugTbdZ244SjMaQ0aqLKPTuEccBEra9WyW2k0qMViNdU1AP89J2bZul+05tEOMKMcXbR6DiPMRJXXkUsNjxItDZXZyqcVcx2NvDd8njGapoZkQBKD5Zbr39hy6O7TpPvMg1fqulJcxNnivcQSonIZ/OMi46j6BK6HiwW1y6HZoDQBZsU6VZWo9JG1ncJ/CJoduqSMs/VUFDecKBgNoJqwd6wDzW9hCD26TQ18AFV3KfkxLaUFJQxJlhmqv7Tm0j0K1Npk9/FFH4N3nUaH1NHw7KbENFM9nk0NfBrVjDUP8ndfivw0/ALTRLPNARA4FrcpoNmlSwrPG60NJs4zNBRUkZWKpgUrWajExv0E7Gq5Zvj5k+veaj5f/ZzKHHHLIIYcccgjgN4tcdn8Kf6jtAAAAAElFTkSuQmCC" alt="QR NFR10">
+      <div class="label">NFR10</div>
+    </div>
+
+  </div>
+</body>
+</html>
