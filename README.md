@@ -1,59 +1,134 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# EA Tool – Materialverwaltung für den Sanitätsdienst
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Webanwendung zur Verwaltung von Einsatzmaterial, Medikamenten, Fahrzeugbeladungen und Medizingeräten – gebaut mit Laravel 12. Ausgangspunkt ist die Beladung eines **GW-San** (Beladeliste GA-San/GW-San NRW), das System ist aber für beliebige Fahrzeuge und Lagerorte nutzbar.
 
-## About Laravel
+## Funktionen
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Material & Lager
+- **Materialstamm** mit Kategorien (farbig), Artikelnummer, Einheit und Mindestbestand
+- **Lagerorte** und **Bestände** pro Lagerort, optional mit Ablaufdatum / Charge
+- **Ausgabe & Rücknahme** (Checkouts) mit Zweck, offene Ausgaben auf einen Blick
+- **Prüfprotokolle** (Inspections) für Material
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Medikamente
+- Eigene Medikamentenübersicht mit Chargenverwaltung
+- Filter für **Unterschreitung des Mindestbestands** und **Ablauf in den nächsten 30 Tagen**
+- **Entnahme per QR-Code** ohne Login (passwortgeschützt), Protokollierung wer wann wie viel entnommen hat
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Fahrzeuge & Beladung
+- Fahrzeuge mit Funkrufname, Kennzeichen, TÜV-Datum und Foto
+- Gliederung in **Ausrüstungsmodule** (Notfallrucksack, Medizingerät, Trage, Sonstiges) mit Soll- und Ist-Beladung
+- **Medizingeräte als Einzelgeräte** mit Seriennummer sowie **MTK-/STK-Fälligkeit**; Geräte lassen sich Modulen zuweisen
 
-## Learning Laravel
+### NFR-Prüfprotokolle (Außenprüfung)
+- Prüfung eines Moduls direkt am Fahrzeug **per QR-Code, ohne Benutzerkonto** – nur mit einem gemeinsamen Prüfpasswort
+- Positionen abhaken, Ist-Mengen und Bemerkungen erfassen, **digitale Unterschrift**
+- Mängel bleiben offen, bis sie im System als behoben markiert werden
+- Druckansicht der Protokolle; druckbare QR-Code-Übersicht unter `public/qrcodes/nfr_qrcodes.html`
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### Dashboard
+- Aktive Materialien, Unterschreitungen des Mindestbestands
+- Abgelaufene und bald ablaufende Bestände (30 Tage)
+- Fällige MTK/STK (30 Tage), offene Mängel aus NFR-Protokollen, letzte Ausgaben
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Administration
+- Benutzerverwaltung mit Rollen (**admin**, **materialwart**, **user**) über `spatie/laravel-permission`
+- Einstellbares QR-Prüfpasswort
+- **Aktivitätsprotokoll** aller Änderungen über `spatie/laravel-activitylog`
 
-## Laravel Sponsors
+## Technik
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+| Bereich   | Verwendet |
+|-----------|-----------|
+| Backend   | PHP 8.2+, Laravel 12, Laravel Breeze (Auth) |
+| Frontend  | Blade, Tailwind CSS, Alpine.js, Vite |
+| Datenbank | SQLite (Standard), MySQL/MariaDB möglich |
+| Pakete    | spatie/laravel-permission, spatie/laravel-activitylog, barryvdh/laravel-dompdf |
 
-### Premium Partners
+## Installation
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Voraussetzungen: PHP 8.2+, Composer, Node.js mit npm.
 
-## Contributing
+```bash
+git clone https://github.com/DennisB1102/EA.git
+cd EA
+composer run setup
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+`composer run setup` installiert die Abhängigkeiten, legt die `.env` an, erzeugt den App-Key, führt die Migrationen aus und baut die Assets.
 
-## Code of Conduct
+Danach Rollen und Admin-Konto anlegen und den Storage-Link für Fahrzeugbilder setzen:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+php artisan db:seed
+php artisan storage:link
+```
 
-## Security Vulnerabilities
+Optional die Beispielbeladung eines GW-San einspielen (setzt ein Fahrzeug mit der ID 1 voraus):
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+php artisan db:seed --class=GwSanBeladungSeeder
+```
 
-## License
+### Entwicklung starten
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+composer run dev
+```
+
+Startet Webserver, Queue-Worker, Log-Ausgabe (Pail) und Vite parallel. Die App läuft dann unter http://localhost:8000.
+
+### Tests
+
+```bash
+composer run test
+```
+
+## Konfiguration
+
+Wichtige Werte in der `.env`:
+
+| Variable          | Bedeutung |
+|-------------------|-----------|
+| `APP_NAME`        | Anzeigename, z. B. `"EA Tool"` |
+| `APP_URL`         | Basis-URL – wird für die QR-Code-Links gebraucht |
+| `APP_LOCALE`      | für deutsche Oberfläche `de` |
+| `DB_CONNECTION`   | `sqlite` oder `mysql` |
+| `NFR_QR_PASSWORD` | Start-Passwort für QR-Prüfung und Medikamentenentnahme (kann im Admin-Bereich überschrieben werden) |
+
+## Erster Login & Sicherheit
+
+Der Seeder legt einen Admin an: `admin@ea.local` – das Start-Passwort steht in `database/seeders/AdminUserSeeder.php`.
+
+> **Vor dem produktiven Einsatz unbedingt:**
+> - Admin-Passwort nach dem ersten Login ändern
+> - `NFR_QR_PASSWORD` setzen bzw. unter *Admin → Einstellungen* ein eigenes QR-Passwort vergeben (sonst gilt der Standardwert aus `config/app.php`)
+> - `APP_ENV=production` und `APP_DEBUG=false` setzen
+
+## Deployment auf Shared Hosting
+
+Die `.htaccess` im Projektstamm leitet alle Anfragen nach `public/` um. Damit kann die App auch in einem Unterordner (aktuell `/EA/`) betrieben werden, ohne den Document Root zu ändern. Bei einem anderen Ordnernamen die Pfadangabe in der `.htaccess` anpassen. Besser ist – wenn möglich – den Document Root direkt auf `public/` zu setzen.
+
+## Rollen
+
+| Rolle          | Rechte |
+|----------------|--------|
+| `admin`        | alles, inkl. Benutzer, Einstellungen, Aktivitätsprotokoll |
+| `materialwart` | Material anlegen/bearbeiten, Bestände pflegen, Ausgaben, Prüfungen, Berichte |
+| `user`         | Material und Bestände ansehen, Ausgaben/Rückgaben buchen |
+
+## Projektstruktur (Auszug)
+
+```
+app/Http/Controllers/     Controller (Material, Medikamente, Fahrzeuge, NFR, QR …)
+app/Models/               Eloquent-Modelle
+database/migrations/      Datenbankschema
+database/seeders/         Rollen, Admin, GW-San-Beladung
+resources/views/          Blade-Templates
+references/               Beladeliste GW-San NRW, Quartalscheck-Vorlage
+public/qrcodes/           druckbare QR-Code-Übersicht
+```
+
+## Lizenz
+
+Das Laravel-Grundgerüst steht unter der MIT-Lizenz. Für dieses Projekt ist noch keine eigene Lizenz festgelegt.
